@@ -1,13 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #9e9e9e;
     color: #333;
 }
 
 :root {
-    --main-color: #16b93a;
+    --main-color: #c23e27;
 }
 
 header, section, footer {
@@ -20,20 +20,39 @@ header {
     text-align: center;
 }
 
+@keyframes cambiaColor {
+    0% {
+        color: #a5331f;
+    }
+    50% {
+        color: #f86b52;
+    }
+    100% {
+        color: #a5331f;
+    }
+}
+
 h1 {
     color: var(--main-color);
+    font-size: 2.5em;
+    display: inline-block;
+    -webkit-text-stroke: 0.5px #000000;
+    text-stroke: 2px #000000;
+    padding: 10px;
+    animation: cambiaColor 2.5s infinite;
 }
 
 h2 {
     border-bottom: 2px solid var(--main-color);
     padding-bottom: 5px;
+    color: #000000;
 }
 
 section {
-    background-color: #fff;
+    background-color: #a1a1a1;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     margin-bottom: 20px;
 }
 
@@ -42,150 +61,56 @@ footer {
     padding: 20px;
     background-color: var(--main-color);
     color: #fff;
+    border-radius: 12px;
 }
 
-#idiomas {
-    background-color: #f4f4f4;
+#idiomas, #informatica, #experiencia, #formacion-reglada, #formacion-complementaria {
+    background-color: #b4b4b4;
     padding: 20px;
 }
 
-.languages-container {
+.languages-container, .skills-container, .experience-container, .education-container, .courses-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
 }
 
-.language {
+article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
+    background-color: #c1c1c1;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 180px;
+    width: 250px;
     text-align: center;
 }
 
-.language span {
-    font-size: 50px;
+article span {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+
+article img {
+    width: 40%;
     margin-bottom: 10px;
 }
 
-
-#informatica {
-    background-color: #f4f4f4;
-    padding: 20px;
+article:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
+footer a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
 }
 
-.skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 180px;
-    text-align: center;
-}
-
-.skill span {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-#experiencia {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.experience-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.job {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 250px; /* Ajusta según necesidad */
-    text-align: center;
-}
-
-.job span {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-#formacion-reglada {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.education-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.degree {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 250px; /* Ajuste según necesidad */
-    text-align: center;
-}
-
-.degree span {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-#formacion-complementaria {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.courses-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.course {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 250px; /* Ajuste según necesidad */
-    text-align: center;
-}
-
-.course span {
-    font-size: 50px;
-    margin-bottom: 10px;
+footer a:hover {
+    text-decoration: underline;
 }
